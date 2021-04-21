@@ -24,7 +24,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // validateCred() uses Luhn's algorithm to determine if the credit card number is valid
 const validateCred = (number) => {
-    //store number so last digit can be removed
+    //store number so last digit can be removed without mutating original array
     const storedNumber = number.slice();
     //remove last digit for later
     let lastDigit = storedNumber.pop();
