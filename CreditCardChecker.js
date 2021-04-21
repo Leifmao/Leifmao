@@ -72,10 +72,10 @@ const idInvalidCardCompanies = (storedInvalidNumbers) => {
     for (var i = 0; i < storedInvalidNumbers.length; i++) {
         let firstNumber = storedInvalidNumbers[i][0];
         let AmexExists = (firstNumber) => firstNumber === 3;
-        const VisaExists = (firstNumber) => firstNumber === 4;
-        const MastercardExists = (firstNumber) => firstNumber === 5;
-        const DiscoverExists = (firstNumber) => firstNumber === 6;
-        //if companyArray does not already have Amex
+        let VisaExists = (firstNumber) => firstNumber === 4;
+        let MastercardExists = (firstNumber) => firstNumber === 5;
+        let DiscoverExists = (firstNumber) => firstNumber === 6;
+        //if companyArray does not already have card then put it in if it exists
         if (companyArray.includes('Amex (American Express)') != true && AmexExists(firstNumber) == true) {
             companyArray.push('Amex (American Express)');
         } else if (companyArray.includes('Visa') != true && VisaExists(firstNumber) == true) {
